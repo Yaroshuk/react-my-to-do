@@ -1,0 +1,5 @@
+@import 'sass/style';
+
+.main {
+  @include base-border(false, true, false, true);
+}

@@ -1,0 +1,8 @@
+$baseBorder: 1px solid $borderColor;
+
+@mixin base-border($top:true, $right: true, $bottom: true, $left: true) {
+  @if $top {border-top: $baseBorder}
+  @if $right {border-right: $baseBorder}
+  @if $bottom {border-bottom: $baseBorder}
+  @if $left {border-left: $baseBorder}
+}

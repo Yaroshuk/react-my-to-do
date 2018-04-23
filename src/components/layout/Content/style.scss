@@ -1,0 +1,13 @@
+@import 'sass/style';
+
+.content {
+  .content-title {
+    padding: 10px 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    @include base-border(false, false, true, false);
+
+    h2 {
+      @include h2-style();
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import 'sass/style';
+
+.header {
+  padding: 20px 0;
+  background: $baseColor;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  h1 {
+    @include h1-style();
+  }
+}
