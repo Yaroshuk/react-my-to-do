@@ -1,0 +1,13 @@
+@import 'sass/style';
+
+.task-creator {
+  padding: 20px 10px;
+  @include base-border(false, false, true, false);
+
+  input {
+    padding: 0 10px;
+    width: 100%;
+    height: 25px;
+    border: 1px solid $borderColor;
+  }
+}

@@ -1,1 +1,33 @@
 @import 'sass/style';
+
+.task-wrapper {
+  @include base-border(false, false, true, false);
+
+  .task-title {
+    height: 50px;
+    padding-left: 20px;
+  }
+
+  .task-control {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    @include base-border(false, false, false, true);
+  }
+
+  h3 {
+    line-height: 50px;
+    @include h3-style();
+    @include text-overflow();
+  }
+
+  &.completed {
+    background: $taskCompletedColor;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    @include base-shadow();
+    @include base-transition();
+  }
+}

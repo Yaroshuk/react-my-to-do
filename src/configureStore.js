@@ -1,6 +1,6 @@
 import { createStore, compose } from 'redux';
 import { combineReducers } from 'redux-immutable';
-import tasksReducer from 'containers/TasksList/reducer';
+import tasksReducer from 'reducers/tasks';
 
 const reducers = combineReducers({
   tasks: tasksReducer

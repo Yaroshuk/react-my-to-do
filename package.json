@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "classnames": "^2.2.5",
     "cross-env": "^5.1.4",
     "immutable": "^3.8.2",
     "node-sass-chokidar": "^1.2.2",

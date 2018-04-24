@@ -2,16 +2,29 @@ import React from 'react';
 import Task from 'components/Task';
 
 class TasksList extends React.PureComponent {
-  render() {
-    const { tasks } = this.props;
+  getTasks = () => {
+    const { tasks, onChangeTaskCompleted } = this.props
 
-    const listOfTasks = tasks.map((task) => {
-      return <Task title={task.get('title')} />;
+    return tasks.map((task) => {
+      const id = task.get('id');
+      const title = task.get('title');
+      const completed = task.get('completed');
+
+      return (
+        <Task
+          key={id}
+          title={title}
+          completed={completed}
+          onChangeCompleted={value => onChangeTaskCompleted(id, value)}
+        />
+      );
     });
+  } ;
 
+  render() {
     return (
-      <div>
-        {listOfTasks}
+      <div className="task-list">
+        {this.getTasks()}
       </div>
     );
   }

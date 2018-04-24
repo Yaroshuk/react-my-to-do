@@ -14,3 +14,15 @@
   text-align: center;
   margin: 0;
 }
+
+@mixin h3-style {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
