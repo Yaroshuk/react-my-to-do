@@ -1,10 +1,5 @@
 import { createStore, compose } from 'redux';
-import { combineReducers } from 'redux-immutable';
-import tasksReducer from 'reducers/tasks';
-
-const reducers = combineReducers({
-  tasks: tasksReducer
-});
+import reducers from 'reducers';
 
 const composeEnhancers =
   typeof window === 'object' &&

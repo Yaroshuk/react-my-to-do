@@ -1,16 +1,33 @@
 import { createSelector } from 'reselect';
 
-export const storeName = 'tasks';
+const storeName = 'tasks';
 
-export const getStore = (state) => {
+const getStore = (state) => {
   return state.get(storeName);
 };
 
-export default createSelector(
+const getTasks = createSelector(
   getStore,
-  (state) => {
+  state => state.get('taskList')
+);
+
+const getCompletedTasks = createSelector(
+  getTasks,
+  tasks => tasks.filter(task => task.get('completed') === true)
+);
+
+const getUncompletedTasks = createSelector(
+  getTasks,
+  tasks => tasks.filter(task => task.get('completed') === false)
+);
+
+
+export default createSelector(
+  getCompletedTasks,
+  getUncompletedTasks,
+  (completedTasks, uncompletedTasks) => {
     return {
-      tasks: state
+      tasks: uncompletedTasks.concat(completedTasks)
     };
   }
 );

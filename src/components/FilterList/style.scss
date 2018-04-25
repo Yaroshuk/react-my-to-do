@@ -1,0 +1,5 @@
+@import 'sass/style';
+
+.filter-list {
+  @include base-border(false, false, true, false);
+}

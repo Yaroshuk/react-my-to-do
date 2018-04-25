@@ -1,0 +1,13 @@
+@import 'sass/style';
+
+.filter-item {
+  height: 50px;
+  text-align: center;
+  @include base-border(false, true, false, false);
+  @include base-transition();
+  box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.1);
+  }
+}
