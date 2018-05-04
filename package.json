@@ -2,7 +2,7 @@
   "name": "my-to-do",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yaroshuk.github.io/my-to-do",
+  "homepage": "https://yaroshuk.github.io/react-my-to-do",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
