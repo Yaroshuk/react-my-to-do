@@ -2,6 +2,7 @@
   "name": "my-to-do",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yaroshuk.github.io/my-to-do",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
@@ -29,7 +30,9 @@
     "build-js": "cross-env NODE_PATH=src react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0"
