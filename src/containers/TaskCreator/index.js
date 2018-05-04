@@ -10,11 +10,11 @@ const mapStateToProps = state => selector(state);
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addTask: (...rest) => {
+    onAddTask: (...rest) => {
       dispatch(addNewTask(...rest));
     },
 
-    changeTaskTitle: (...rest) => {
+    onChangeTaskTitle: (...rest) => {
       dispatch(changeTaskCreatorTitle(...rest));
     }
   };

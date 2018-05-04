@@ -1,14 +1,23 @@
 import { createSelector } from 'reselect';
+import { STORE_NAME as filterStore } from 'constants/filter';
+import { STORE_NAME as tasksStore } from 'constants/tasks';
 
-const storeName = 'tasks';
-
-const getStore = (state) => {
-  return state.get(storeName);
+const getFilterStore = (state) => {
+  return state.get(filterStore);
 };
 
+const getTasksStore = (state) => {
+  return state.get(tasksStore);
+};
+
+const getActiveFilter = createSelector(
+  getFilterStore,
+  store => store.get('active')
+);
+
 const getTasks = createSelector(
-  getStore,
-  state => state.get('taskList')
+  getTasksStore,
+  store => store.get('taskList')
 );
 
 const getCompletedTasks = createSelector(
@@ -23,11 +32,23 @@ const getUncompletedTasks = createSelector(
 
 
 export default createSelector(
+  getActiveFilter,
   getCompletedTasks,
   getUncompletedTasks,
-  (completedTasks, uncompletedTasks) => {
-    return {
-      tasks: uncompletedTasks.concat(completedTasks)
-    };
+  (activeFilter, completedTasks, uncompletedTasks) => {
+    switch (activeFilter) {
+      case 'COMPLETED':
+        return {
+          tasks: completedTasks
+        };
+      case 'UNCOMPLETED':
+        return {
+          tasks: uncompletedTasks
+        };
+      default:
+        return {
+          tasks: uncompletedTasks.concat(completedTasks)
+        };
+    }
   }
 );

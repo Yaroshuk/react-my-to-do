@@ -1,13 +1,12 @@
 import { createSelector } from 'reselect';
+import { STORE_NAME as tasksStore } from 'constants/tasks';
 
-const storeName = 'tasks';
-
-const getStore = (state) => {
-  return state.get(storeName);
+const getTasksStore = (state) => {
+  return state.get(tasksStore);
 };
 
 export default createSelector(
-  getStore,
+  getTasksStore,
   (state) => {
     return {
       title: state.getIn(['taskCreator', 'title'])

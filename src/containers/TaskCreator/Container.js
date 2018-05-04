@@ -1,12 +1,12 @@
 import React from 'react';
-import TaskCreator from 'components/TaskCreator';
+import TaskCreator from 'components/TaskCreator/index';
 
-const Container = ({ title, changeTaskTitle, addTask }) => {
+const Container = ({ title, onChangeTaskTitle, onAddTask }) => {
   return (
     <TaskCreator
       title={title}
-      changeTaskTitle={changeTaskTitle}
-      addTask={addTask}
+      changeTaskTitle={onChangeTaskTitle}
+      addTask={onAddTask}
     />
   );
 };

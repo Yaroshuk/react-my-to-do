@@ -2,7 +2,7 @@ import React from 'react';
 import Content from 'components/layout/Content';
 import TasksList from 'containers/TasksList';
 import TaskCreator from 'containers/TaskCreator';
-import FilterList from 'containers/FilterList';
+import FilterList from 'containers/Filter';
 
 import './style.css';
 

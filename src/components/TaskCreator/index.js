@@ -20,6 +20,7 @@ class TaskCreator extends React.Component {
           type="text"
           value={title}
           onChange={event => changeTaskTitle(event.target.value)}
+          placeholder="Add new task..."
           onKeyDown={this.onKeyDown}
         />
       </div>

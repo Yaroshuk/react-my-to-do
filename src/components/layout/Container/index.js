@@ -5,7 +5,13 @@ const Container = ({ children }) => {
   return (
     <Grid>
       <Row>
-        <Col xs={6} xsOffset={3}>
+        <Col
+          xs={12}
+          sm={10}
+          smOffset={1}
+          md={6}
+          mdOffset={3}
+        >
           {children}
         </Col>
       </Row>

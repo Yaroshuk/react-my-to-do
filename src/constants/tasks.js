@@ -2,3 +2,5 @@ export const ADD_NEW_TASK = 'ADD_NEW_TASK';
 export const CHANGE_TASK_COMPLETED = 'CHANGE_TASK_COMPLETED';
 
 export const CHANGE_TASK_CREATOR_TITLE = 'CHANGE_TASK_CREATOR_TITLE';
+
+export const STORE_NAME = 'tasks';
