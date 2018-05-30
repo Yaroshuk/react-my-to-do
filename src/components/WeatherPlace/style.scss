@@ -1,0 +1,15 @@
+@import "sass/style";
+
+.weather-wrapper {
+  color: #fff;
+  text-align: right;
+  font-family: $robotoFont;
+  cursor: pointer;
+  border-left: 1px solid #fff;
+
+  @include base-transition();
+
+  &:hover {
+    border-left: 3px solid #fff;
+  }
+}

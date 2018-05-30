@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic');
 
+$robotoFont: 'Roboto', sans-serif;
+
 @mixin h1-style {
-  font-family: 'Roboto', sans-serif;
+  font-family: $robotoFont;
   font-size: 48px;
   text-align: center;
   text-transform: uppercase;
@@ -9,14 +11,14 @@
 }
 
 @mixin h2-style {
-  font-family: 'Roboto', sans-serif;
+  font-family: $robotoFont;
   font-size: 24px;
   text-align: center;
   margin: 0;
 }
 
 @mixin h3-style {
-  font-family: 'Roboto', sans-serif;
+  font-family: $robotoFont;
   font-size: 16px;
   margin: 0;
 }
